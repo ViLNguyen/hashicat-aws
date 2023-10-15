@@ -3,10 +3,15 @@ module "s3_bucket" {
 
   bucket_prefix = "vinguyen"
   bucket = "my-s3-bucket"
+  version = "2.8.0"
   acl    = "private"
 
   versioning = {
     enabled = true
   }
 
+  tags = {
+    Department = "devops"
+    Billable = "true"
+  }
 }
